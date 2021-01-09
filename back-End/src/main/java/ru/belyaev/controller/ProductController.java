@@ -26,19 +26,17 @@ public class ProductController {
     @Autowired
     ProductService productService;
 
-    @GetMapping("/api/products")
-    public @ResponseBody List<Product> getProduct() {
-        List<Product> productList = productService.listAllProducts();
-        return productList;
-    }
+//    @GetMapping("/api/products")
+//    public @ResponseBody List<Product> getProduct() {
+//        List<Product> productList = productService.listAllProducts();
+//        return productList;
+//    }
 
     @GetMapping("/api/productsWithPagination/{page}")
     public @ResponseBody Page getProduct1(@PathVariable Integer page) {
-        Page<Product> productList = productService.listAllProductsWithPag(page);
+        Page<Product> productList = productService.listAllProductsWithPage(page);
         return productList;
     }
-
-
 
     @GetMapping("/api/products/{id}")
     public @ResponseBody Product getProduct(@PathVariable Integer id) {

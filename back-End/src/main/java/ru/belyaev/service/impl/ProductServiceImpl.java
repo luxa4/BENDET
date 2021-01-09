@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import ru.belyaev.entity.Product;
 import ru.belyaev.repository.ProductRepository;
@@ -34,19 +35,17 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.count();
     }
 
-    @Override
-    public List<Product> listAllProducts() {
-        List<Product> products = productRepository.listAllProduct();
-        return products;
-    }
+//    @Override
+//    public List<Product> listAllProducts() {
+//        List<Product> products = productRepository.listAllProduct();
+//        return products;
+//    }
 
     @Override
-    public Page listAllProductsWithPag(Integer page) {
-        Pageable pageable = PageRequest.of(page,9);
-//        List<Product> products = productRepository.listAllProduct(pageable);
+    public Page listAllProductsWithPage(Integer page) {
+        Pageable pageable = PageRequest.of(page,9, Sort.by("price").descending());
         Page <Product> products = productRepository.findAll(pageable);
-        LOGGER.info("Pag size {}", productRepository.findAll(pageable).stream().count());
-        LOGGER.info("Pag totalpages  {}", productRepository.findAll(pageable).getTotalPages());
+//        List<Product> products = productRepository.listAllProduct(pageable);
 //        LOGGER.info("Pag find-First {}",products1.stream().findFirst());
 //        LOGGER.info("Pag find-First {}",products1.getContent());
         return products;

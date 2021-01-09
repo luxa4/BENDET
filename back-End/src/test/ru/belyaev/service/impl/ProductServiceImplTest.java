@@ -31,11 +31,11 @@ public class ProductServiceImplTest {
         verify(productRepository, times(1)).count();
     }
 
-    @Test
-    public void testListAllProducts() {
-        productService.listAllProducts();
-        verify(productRepository, times(1)).findAll();
-    }
+//    @Test
+//    public void testListAllProducts() {
+//        productService.listAllProducts();
+//        verify(productRepository, times(1)).findAll();
+//    }
 
     @Test
     public void testShowMaxHeight() {

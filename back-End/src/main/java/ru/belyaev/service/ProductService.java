@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface ProductService {
 
-    Page listAllProductsWithPag(Integer page);
+    Page listAllProductsWithPage(Integer page);
 
     void save(Product product);
 
@@ -26,7 +26,7 @@ public interface ProductService {
 
     Long countAllProduct();
 
-    List<Product> listAllProducts();
+//    List<Product> listAllProducts();
 
     Product showProductPageByProductId(int id);
 
