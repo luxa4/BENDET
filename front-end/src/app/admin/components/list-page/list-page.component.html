@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table caption-top">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Name</th>
+            <th scope="col">height</th>
+            <th scope="col">width</th>
+            <th scope="col">length</th>
+            <th scope="col">weight</th>
+            <th scope="col">price</th>
+            <th scope="col">status</th>
+            <th scope="col" class="text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let product of products; let idx=index">
+          <th scope="row">{{idx+1}}</th>
+          <td>{{product.brand}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.height}}</td>
+          <td>{{product.width}}</td>
+          <td>{{product.length}}</td>
+          <td>{{product.weight}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.status}}</td>
+          <td>
+            <a href="" [routerLink]="['edit', product.id]"><button class="btn btn-warning" >Edit</button></a>
+            <button class="btn btn-danger" (click)="deleteProduct(product.id)">Remove</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

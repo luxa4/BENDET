@@ -1,0 +1,17 @@
+<header>
+  <nav>
+    <div class="container-fluid">
+      <div class="row justify-content-around align-items-center nav">
+        <div class="col-5 offset-1"><a href="#" ><img src="assets/images/logowhite.png" alt="" width="156px" height="52px"/></a></div>
+        <div class="col-3 searchField">
+          <input type="text" placeholder="Найти товар..." [(ngModel)]="searchString"><i class="fas fa-search"></i>
+        </div>
+        <div class="col-1 offset-1 logIn"><a href="#"><i class="fas fa-user"></i></a></div>
+        <div class="col-1 totalCart"><a href="#"><i class="fas fa-shopping-cart"></i></a></div>
+      </div>
+    </div>
+  </nav>
+  <div class="carusel" style="background-image: url('assets/images/table.jpg')">
+  </div>
+</header>
+<router-outlet></router-outlet>

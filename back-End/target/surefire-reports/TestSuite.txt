@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 36, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 42.273 s <<< FAILURE! - in TestSuite
+shouldReturnJsonObject(ru.belyaev.controller.ajax.AddToShoppingCartControllerTest)  Time elapsed: 0.32 s  <<< FAILURE!
+org.testng.TestNGException: 
+
+Parameter 'productId' is required by @Test on method shouldReturnJsonObject but has not been marked @Optional or defined
+
+
+shouldReturnJsonObject(ru.belyaev.controller.ajax.RemoveFromShoppingCartControllerTest)  Time elapsed: 0.202 s  <<< FAILURE!
+org.testng.TestNGException: 
+
+Parameter 'productId' is required by @Test on method shouldReturnJsonObject but has not been marked @Optional or defined
+
+
+shouldCallView(ru.belyaev.controller.ProductControllerTest)  Time elapsed: 0.084 s  <<< FAILURE!
+java.lang.AssertionError: View name expected:<home> but was:<errorPage>
+	at ru.belyaev.controller.ProductControllerTest.shouldCallView(ProductControllerTest.java:87)
+

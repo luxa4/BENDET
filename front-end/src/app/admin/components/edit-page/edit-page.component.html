@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <form *ngIf="product" [formGroup]="form" (ngSubmit)="updateProduct()">
+        <label for="brand">Брэнд</label>
+        <input type="text" id="brand" formControlName="brand">
+        <label for="type">Тип</label>
+        <input type="text" id="type" formControlName="type">
+        <label for="name">Наименование</label>
+        <input type="text" id="name" formControlName="name">
+        <label for="width">Ширина</label>
+        <input type="text" id="width" formControlName="width">
+        <label for="length">Длина</label>
+        <input type="text" id="length" formControlName="length">
+        <label for="height">Высота</label>
+        <input type="text" id="height" formControlName="height">
+        <label for="weight">Вес</label>
+        <input type="text" id="weight" formControlName="weight">
+        <label for="price">Цена</label>
+        <input type="text" id="price" formControlName="price">
+        <label for="status">Статус</label>
+        <input type="text" id="status" formControlName="status">
+        <label for="description">Описание</label>
+        <textarea type="text" id="description" formControlName="description"></textarea>
+        <label for="img1">Изображение 1</label>
+        <input type="text" id="img1" formControlName="img1">
+        <label for="img2">Изображение 2</label>
+        <input type="text" id="img2" formControlName="img2">
+        <label for="img3">Изображение 3</label>
+        <input type="text" id="img3" formControlName="img3">
+        <label for="img4">Изображение 4</label>
+        <input type="text" id="img4" formControlName="img4">
+        <label for="img5">Изображение 5</label>
+        <input type="text" id="img5" formControlName="img5">
+        <button class="btn btn-warning" type="submit">Обновить</button>
+      </form>
+    </div>
+  </div>
+</div>

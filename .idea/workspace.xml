@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d78a58c2-41c4-4650-b748-386cce122804" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/WardRobes-master/front/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/WardRobes-master/front/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WardRobes-master/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/WardRobes-master/front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WardRobes-master/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/WardRobes-master/front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WardRobes-master/front/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/WardRobes-master/front/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WardRobes-master/front/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WardRobes-master/front/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WardRobes-master/front/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/WardRobes-master/front/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WardRobes-master/front/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WardRobes-master/front/src/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/WardRobes-master/front" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.1.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1l8fpY5Q0LP8fGnLSaGsINZtfdi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/front-End" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d78a58c2-41c4-4650-b748-386cce122804" name="Default Changelist" comment="" />
+      <created>1606983822035</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606983822035</updated>
+      <workItem from="1606983823097" duration="474000" />
+      <workItem from="1607028965567" duration="34000" />
+      <workItem from="1609837887005" duration="2259000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="828" y="436" key="#TSLint" timestamp="1609841091736">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="828" y="436" key="#TSLint/-1280.0.1280.738/0.0.1920.1050@0.0.1920.1050" timestamp="1609841091736" />
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609840850929">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="414" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1280.0.1280.738/0.0.1920.1050@0.0.1920.1050" timestamp="1609840850929" />
+    <state x="757" y="400" key="DetectedRootsChooserDialog" timestamp="1606983974175">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="757" y="400" key="DetectedRootsChooserDialog/-1280.0.1280.738/0.0.1920.1050@0.0.1920.1050" timestamp="1606983974175" />
+    <state x="666" y="266" key="FileChooserDialogImpl" timestamp="1609841480923">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="666" y="266" key="FileChooserDialogImpl/-1280.0.1280.738/0.0.1920.1050@0.0.1920.1050" timestamp="1609841480923" />
+    <state x="440" y="99" key="SettingsEditor" timestamp="1609838156276">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="440" y="99" key="SettingsEditor/-1280.0.1280.738/0.0.1920.1050@0.0.1920.1050" timestamp="1609838156276" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1609841273925">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/-1280.0.1280.738/0.0.1920.1050@0.0.1920.1050" timestamp="1609841273925" />
+  </component>
+</project>

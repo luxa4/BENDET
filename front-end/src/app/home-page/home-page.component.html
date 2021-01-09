@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 menu text-center">
+      <p ngDefaultControl [class.active]="type ==t" [(ngModel)]="type" *ngFor="let t of types" (click)="type = t">{{t}}</p>
+    </div>
+  </div>
+  <div class="row filters">
+        <div class="col-3">
+           <div class="priceFilter">
+             <div class="filterTitle ml-9">Цена, <i class="fas fa-ruble-sign"></i></div>
+<!--             <div class="container-fluid">-->
+<!--               <div class="row justify-content-around">-->
+<!--                 <div class="col-6"><input type="text" value="{{minPrice | currency:'RUR':'symbol-narrow':'1.2-2':'ru' }}"></div>-->
+<!--                 <div class="col-6"><input type="text" value="{{maxPrice | currency:'RUR':'symbol-narrow':'1.2-2':'ru'}}"></div>-->
+<!--               </div>-->
+<!--             </div>-->
+             <div class="mt-67">
+                <app-slider-price
+                  *ngIf="maxPrice && minPrice"
+                  [maxPrice]="maxPrice" [minPrice]="minPrice"
+                  (elementMin)="changePriceMin($event)"
+                  (elementMax)="changePriceMax($event)">
+                </app-slider-price>
+             </div>
+           </div>
+        </div>
+        <div class="col-3">
+           <div class="brandFilter">
+             <div class="filterTitle">Бренд</div>
+             <div class="mt-19">
+               <select name="" id="" [(ngModel)]="brand">
+                 <option value="" selected>Все</option>
+                 <option *ngFor="let br of brands" value="{{br}}">{{br}}</option>
+               </select>
+             </div>
+           </div>
+        </div>
+        <div class="col-3">
+          <div class="sortFilter">
+            <div class="filterTitle">Сортировка</div>
+            <div class="container-fluid mt-19">
+              <div class="row ">
+                <div class="col-4 p-0 sortPrice" (click)="sortPriceUp = true; sortPriceDown= false">по цене <i class="fas fa-long-arrow-alt-up"></i></div>
+                <div class="col-8 sortPrice text-left" (click)="sortNameUp = true; sortNameDown = false">по названию <i class="fas fa-long-arrow-alt-up"></i></div>
+                <div class="col-4 p-0 sortPrice" (click)="sortPriceDown = true; sortPriceUp = false">по цене <i class="fas fa-long-arrow-alt-down"></i></div>
+                <div class="col-8 sortPrice text-left" (click)="sortNameDown = true; sortNameUp = false">по названию <i class="fas fa-long-arrow-alt-down"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <button class="reset-filter" (click)="resetFilters()">Сбросить фильтр</button>
+        </div>
+  </div>
+  <div class="row" *ngIf="maxPrice && minPrice">
+    <div class="col-4"  *ngFor="let product of products">
+      <div class="productCard text-center">
+        <div class="text-center"><img [src]="product.imageUrl1" (mouseenter)="changeSrc(product, true)" (mouseout)="changeSrc(product, false)" alt="" width="424px" height="267px"></div>
+        <div class="pr-name">{{product.type}} {{product.name}}</div>
+        <div class="pr-price">{{product.price | currency:'RUR':'symbol-narrow':'1.2-2':'ru'}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="loadMoreFlag">
+    <div class="col-12 text-center">
+      <button class="btn-more-load" (click)="loadMore()">Загрузить еще</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="footer text-center">
+        <a href="#"><img src="assets/images/logoFoot.png" width="120px" height="40px"></a>
+<!--        <a href="#"><img src="assets/images/burakovStudio.png" width="120px" height="40px"></a>-->
+
+
+      </div>
+
+    </div>
+  </div>
+</div>

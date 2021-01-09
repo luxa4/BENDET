@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="36" passed="33" failed="3" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-12-03T12:33:25 MSK" name="Surefire suite" finished-at="2020-12-03T12:34:06 MSK" duration-ms="40490">
+    <groups>
+    </groups>
+    <test started-at="2020-12-03T12:33:25 MSK" name="Surefire test" finished-at="2020-12-03T12:34:06 MSK" duration-ms="40490">
+      <class name="ru.belyaev.service.impl.ProductServiceImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="43" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCountAllProduct()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testCountAllProduct" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCountAllProduct -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCountProductBySearchFilter()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testCountProductBySearchFilter" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCountProductBySearchFilter -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCountProductForSearchTextForm()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testCountProductForSearchTextForm" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCountProductForSearchTextForm -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testFindProductForSearchTextForm()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testFindProductForSearchTextForm" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindProductForSearchTextForm -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testListAllProducts()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testListAllProducts" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListAllProducts -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testProductBySearchFilter()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testProductBySearchFilter" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductBySearchFilter -->
+        <test-method signature="testShowMaxHeight()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testShowMaxHeight" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShowMaxHeight -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testShowMaxLength()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testShowMaxLength" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShowMaxLength -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testShowMaxPrice()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testShowMaxPrice" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShowMaxPrice -->
+        <test-method signature="testShowMaxWidth()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testShowMaxWidth" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShowMaxWidth -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testShowMinHeight()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testShowMinHeight" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShowMinHeight -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testShowMinLength()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testShowMinLength" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShowMinLength -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testShowMinPrice()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testShowMinPrice" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShowMinPrice -->
+        <test-method signature="testShowMinWidth()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testShowMinWidth" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShowMinWidth -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testShowProductPageByProductId()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="testShowProductPageByProductId" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShowProductPageByProductId -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ProductServiceImplTest@97e93f1]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+      </class> <!-- ru.belyaev.service.impl.ProductServiceImplTest -->
+      <class name="ru.belyaev.controller.ProductControllerTest">
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:ru.belyaev.controller.ProductControllerTest@491b9b8]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextPrepareTestInstance" finished-at="2020-12-03T12:34:05 MSK" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:ru.belyaev.controller.ProductControllerTest@491b9b8]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextBeforeTestClass" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ProductControllerTest@491b9b8]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ProductControllerTest.controllerIsCreated()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.controller.ProductControllerTest@491b9b8]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="controllerIsCreated()[pri:0, instance:ru.belyaev.controller.ProductControllerTest@491b9b8]" started-at="2020-12-03T12:34:05 MSK" name="controllerIsCreated" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- controllerIsCreated -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ProductControllerTest@491b9b8]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ProductControllerTest.shouldCallView() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ProductControllerTest@491b9b8]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ProductControllerTest.controllerIsCreated()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.controller.ProductControllerTest@491b9b8]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldCallView()[pri:0, instance:ru.belyaev.controller.ProductControllerTest@491b9b8]" started-at="2020-12-03T12:34:05 MSK" name="shouldCallView" finished-at="2020-12-03T12:34:05 MSK" duration-ms="14" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[View name expected:<home> but was:<errorPage>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: View name expected:<home> but was:<errorPage>
+at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+at org.springframework.test.web.servlet.result.ViewResultMatchers.lambda$name$1(ViewResultMatchers.java:69)
+at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:196)
+at ru.belyaev.controller.ProductControllerTest.shouldCallView(ProductControllerTest.java:87)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:240)
+at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:181)
+at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:252)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:593)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldCallView -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ProductControllerTest@491b9b8]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ProductControllerTest.shouldCallView() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:ru.belyaev.controller.ProductControllerTest@491b9b8]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestClass" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- ru.belyaev.controller.ProductControllerTest -->
+      <class name="ru.belyaev.controller.ajax.RemoveFromShoppingCartControllerTest">
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:ru.belyaev.controller.ajax.RemoveFromShoppingCartControllerTest@50378a4]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextBeforeTestClass" finished-at="2020-12-03T12:34:04 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:ru.belyaev.controller.ajax.RemoveFromShoppingCartControllerTest@50378a4]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextPrepareTestInstance" finished-at="2020-12-03T12:34:04 MSK" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ajax.RemoveFromShoppingCartControllerTest@50378a4]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:04 MSK" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ajax.RemoveFromShoppingCartControllerTest.controllerIsCreated()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.controller.ajax.RemoveFromShoppingCartControllerTest@50378a4]" started-at="2020-12-03T12:34:04 MSK" name="setUp" finished-at="2020-12-03T12:34:04 MSK" duration-ms="56" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="controllerIsCreated()[pri:0, instance:ru.belyaev.controller.ajax.RemoveFromShoppingCartControllerTest@50378a4]" started-at="2020-12-03T12:34:04 MSK" name="controllerIsCreated" finished-at="2020-12-03T12:34:04 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- controllerIsCreated -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ajax.RemoveFromShoppingCartControllerTest@50378a4]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:04 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ajax.RemoveFromShoppingCartControllerTest.controllerIsCreated()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method signature="shouldReturnJsonObject(int, int)[pri:0, instance:ru.belyaev.controller.ajax.RemoveFromShoppingCartControllerTest@50378a4]" started-at="2020-12-03T12:34:04 MSK" name="shouldReturnJsonObject" finished-at="2020-12-03T12:34:04 MSK" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'productId' is required by @Test on method shouldReturnJsonObject but has not been marked @Optional or defined
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'productId' is required by @Test on method shouldReturnJsonObject but has not been marked @Optional or defined
+
+at org.testng.internal.Parameters.createParams(Parameters.java:272)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:360)
+at org.testng.internal.Parameters.createParameters(Parameters.java:704)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:879)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:744)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:783)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnJsonObject -->
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:ru.belyaev.controller.ajax.RemoveFromShoppingCartControllerTest@50378a4]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextAfterTestClass" finished-at="2020-12-03T12:34:04 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- ru.belyaev.controller.ajax.RemoveFromShoppingCartControllerTest -->
+      <class name="ru.belyaev.controller.ajax.AddToShoppingCartControllerTest">
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:ru.belyaev.controller.ajax.AddToShoppingCartControllerTest@5884a914]" started-at="2020-12-03T12:33:25 MSK" name="springTestContextBeforeTestClass" finished-at="2020-12-03T12:33:25 MSK" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:ru.belyaev.controller.ajax.AddToShoppingCartControllerTest@5884a914]" started-at="2020-12-03T12:33:25 MSK" name="springTestContextPrepareTestInstance" finished-at="2020-12-03T12:34:03 MSK" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="38214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ajax.AddToShoppingCartControllerTest@5884a914]" started-at="2020-12-03T12:34:03 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:03 MSK" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ajax.AddToShoppingCartControllerTest.shouldCreatControllerAddToShoppingCart()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.controller.ajax.AddToShoppingCartControllerTest@5884a914]" started-at="2020-12-03T12:34:03 MSK" name="setUp" finished-at="2020-12-03T12:34:04 MSK" duration-ms="484" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldCreatControllerAddToShoppingCart()[pri:0, instance:ru.belyaev.controller.ajax.AddToShoppingCartControllerTest@5884a914]" started-at="2020-12-03T12:34:04 MSK" name="shouldCreatControllerAddToShoppingCart" finished-at="2020-12-03T12:34:04 MSK" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldCreatControllerAddToShoppingCart -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ajax.AddToShoppingCartControllerTest@5884a914]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:04 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ajax.AddToShoppingCartControllerTest.shouldCreatControllerAddToShoppingCart()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method signature="shouldReturnJsonObject(int, int)[pri:0, instance:ru.belyaev.controller.ajax.AddToShoppingCartControllerTest@5884a914]" started-at="2020-12-03T12:34:04 MSK" name="shouldReturnJsonObject" finished-at="2020-12-03T12:34:04 MSK" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'productId' is required by @Test on method shouldReturnJsonObject but has not been marked @Optional or defined
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'productId' is required by @Test on method shouldReturnJsonObject but has not been marked @Optional or defined
+
+at org.testng.internal.Parameters.createParams(Parameters.java:272)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:360)
+at org.testng.internal.Parameters.createParameters(Parameters.java:704)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:879)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:744)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:783)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnJsonObject -->
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:ru.belyaev.controller.ajax.AddToShoppingCartControllerTest@5884a914]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextAfterTestClass" finished-at="2020-12-03T12:34:04 MSK" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- ru.belyaev.controller.ajax.AddToShoppingCartControllerTest -->
+      <class name="ru.belyaev.service.impl.UserServiceImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.UserServiceImplTest@4b520ea8]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAddUser()[pri:0, instance:ru.belyaev.service.impl.UserServiceImplTest@4b520ea8]" started-at="2020-12-03T12:34:05 MSK" name="testAddUser" finished-at="2020-12-03T12:34:06 MSK" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddUser -->
+      </class> <!-- ru.belyaev.service.impl.UserServiceImplTest -->
+      <class name="ru.belyaev.controller.ShoppingCartControllerTest">
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:ru.belyaev.controller.ShoppingCartControllerTest@7a6d7e92]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextBeforeTestClass" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:ru.belyaev.controller.ShoppingCartControllerTest@7a6d7e92]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextPrepareTestInstance" finished-at="2020-12-03T12:34:05 MSK" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ShoppingCartControllerTest@7a6d7e92]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ShoppingCartControllerTest.controllerIsCreated()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.controller.ShoppingCartControllerTest@7a6d7e92]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="controllerIsCreated()[pri:0, instance:ru.belyaev.controller.ShoppingCartControllerTest@7a6d7e92]" started-at="2020-12-03T12:34:05 MSK" name="controllerIsCreated" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- controllerIsCreated -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ShoppingCartControllerTest@7a6d7e92]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ShoppingCartControllerTest.shouldReturnViewShoppingCart() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ShoppingCartControllerTest@7a6d7e92]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ShoppingCartControllerTest.controllerIsCreated()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.controller.ShoppingCartControllerTest@7a6d7e92]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldReturnViewShoppingCart()[pri:0, instance:ru.belyaev.controller.ShoppingCartControllerTest@7a6d7e92]" started-at="2020-12-03T12:34:05 MSK" name="shouldReturnViewShoppingCart" finished-at="2020-12-03T12:34:05 MSK" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnViewShoppingCart -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ShoppingCartControllerTest@7a6d7e92]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ShoppingCartControllerTest.shouldReturnViewShoppingCart() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:ru.belyaev.controller.ShoppingCartControllerTest@7a6d7e92]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestClass" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- ru.belyaev.controller.ShoppingCartControllerTest -->
+      <class name="ru.belyaev.service.impl.OrderServiceImplTest">
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:ru.belyaev.service.impl.OrderServiceImplTest@aba625]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextPrepareTestInstance" finished-at="2020-12-03T12:34:05 MSK" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:ru.belyaev.service.impl.OrderServiceImplTest@aba625]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextBeforeTestClass" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.OrderServiceImplTest@aba625]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.service.impl.OrderServiceImplTest@aba625]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.service.impl.OrderServiceImplTest.shouldThrowExceptionWhenShoppingCartIsNull()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method signature="shouldThrowExceptionWhenShoppingCartIsNull()[pri:0, instance:ru.belyaev.service.impl.OrderServiceImplTest@aba625]" started-at="2020-12-03T12:34:05 MSK" name="shouldThrowExceptionWhenShoppingCartIsNull" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <exception class="ru.belyaev.exception.InternalServerErrorException">
+            <message>
+              <![CDATA[Shopping cart is null or empty]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[ru.belyaev.exception.InternalServerErrorException: Shopping cart is null or empty
+at ru.belyaev.service.impl.OrderServiceImpl.makeOrder(OrderServiceImpl.java:43)
+at ru.belyaev.service.impl.OrderServiceImplTest.shouldThrowExceptionWhenShoppingCartIsNull(OrderServiceImplTest.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:240)
+at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:181)
+at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:252)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:593)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- ru.belyaev.exception.InternalServerErrorException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldThrowExceptionWhenShoppingCartIsNull -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.service.impl.OrderServiceImplTest@aba625]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.service.impl.OrderServiceImplTest.shouldThrowExceptionWhenShoppingCartIsNull()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.service.impl.OrderServiceImplTest@aba625]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.service.impl.OrderServiceImplTest.testMakeOrder()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.OrderServiceImplTest@aba625]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testMakeOrder()[pri:0, instance:ru.belyaev.service.impl.OrderServiceImplTest@aba625]" started-at="2020-12-03T12:34:05 MSK" name="testMakeOrder" finished-at="2020-12-03T12:34:05 MSK" duration-ms="28" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMakeOrder -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.service.impl.OrderServiceImplTest@aba625]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.service.impl.OrderServiceImplTest.testMakeOrder()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:ru.belyaev.service.impl.OrderServiceImplTest@aba625]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestClass" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- ru.belyaev.service.impl.OrderServiceImplTest -->
+      <class name="ru.belyaev.controller.SearchTextControllerTest">
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:ru.belyaev.controller.SearchTextControllerTest@1a4927d6]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextPrepareTestInstance" finished-at="2020-12-03T12:34:05 MSK" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:ru.belyaev.controller.SearchTextControllerTest@1a4927d6]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextBeforeTestClass" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.SearchTextControllerTest@1a4927d6]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.SearchTextControllerTest.checkViewName() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.controller.SearchTextControllerTest@1a4927d6]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkViewName()[pri:0, instance:ru.belyaev.controller.SearchTextControllerTest@1a4927d6]" started-at="2020-12-03T12:34:05 MSK" name="checkViewName" finished-at="2020-12-03T12:34:05 MSK" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkViewName -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.SearchTextControllerTest@1a4927d6]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.SearchTextControllerTest.checkViewName() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.SearchTextControllerTest@1a4927d6]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.SearchTextControllerTest.controllerIsCreated()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.controller.SearchTextControllerTest@1a4927d6]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="controllerIsCreated()[pri:0, instance:ru.belyaev.controller.SearchTextControllerTest@1a4927d6]" started-at="2020-12-03T12:34:05 MSK" name="controllerIsCreated" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- controllerIsCreated -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.SearchTextControllerTest@1a4927d6]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.SearchTextControllerTest.controllerIsCreated()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:ru.belyaev.controller.SearchTextControllerTest@1a4927d6]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestClass" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- ru.belyaev.controller.SearchTextControllerTest -->
+      <class name="ru.belyaev.controller.ajax.SearchControllerTest">
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:ru.belyaev.controller.ajax.SearchControllerTest@60f00693]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextPrepareTestInstance" finished-at="2020-12-03T12:34:04 MSK" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:ru.belyaev.controller.ajax.SearchControllerTest@60f00693]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextBeforeTestClass" finished-at="2020-12-03T12:34:04 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ajax.SearchControllerTest@60f00693]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:04 MSK" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ajax.SearchControllerTest.controllerIsCreated()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.controller.ajax.SearchControllerTest@60f00693]" started-at="2020-12-03T12:34:04 MSK" name="setUp" finished-at="2020-12-03T12:34:04 MSK" duration-ms="68" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="controllerIsCreated()[pri:0, instance:ru.belyaev.controller.ajax.SearchControllerTest@60f00693]" started-at="2020-12-03T12:34:04 MSK" name="controllerIsCreated" finished-at="2020-12-03T12:34:04 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- controllerIsCreated -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ajax.SearchControllerTest@60f00693]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:04 MSK" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ajax.SearchControllerTest.controllerIsCreated()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ajax.SearchControllerTest@60f00693]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:04 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ajax.SearchControllerTest.shouldReturnJsonObject() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.controller.ajax.SearchControllerTest@60f00693]" started-at="2020-12-03T12:34:04 MSK" name="setUp" finished-at="2020-12-03T12:34:04 MSK" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldReturnJsonObject()[pri:0, instance:ru.belyaev.controller.ajax.SearchControllerTest@60f00693]" started-at="2020-12-03T12:34:04 MSK" name="shouldReturnJsonObject" finished-at="2020-12-03T12:34:04 MSK" duration-ms="306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnJsonObject -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.ajax.SearchControllerTest@60f00693]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:04 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.ajax.SearchControllerTest.shouldReturnJsonObject() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:ru.belyaev.controller.ajax.SearchControllerTest@60f00693]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextAfterTestClass" finished-at="2020-12-03T12:34:04 MSK" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- ru.belyaev.controller.ajax.SearchControllerTest -->
+      <class name="ru.belyaev.service.impl.ShoppingCartServiceImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ShoppingCartServiceImplTest@5a5a729f]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAddToShoppingCart()[pri:0, instance:ru.belyaev.service.impl.ShoppingCartServiceImplTest@5a5a729f]" started-at="2020-12-03T12:34:05 MSK" name="testAddToShoppingCart" finished-at="2020-12-03T12:34:05 MSK" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddToShoppingCart -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.service.impl.ShoppingCartServiceImplTest@5a5a729f]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRemoveFromShoppingCart()[pri:0, instance:ru.belyaev.service.impl.ShoppingCartServiceImplTest@5a5a729f]" started-at="2020-12-03T12:34:05 MSK" name="testRemoveFromShoppingCart" finished-at="2020-12-03T12:34:05 MSK" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveFromShoppingCart -->
+      </class> <!-- ru.belyaev.service.impl.ShoppingCartServiceImplTest -->
+      <class name="ru.belyaev.controller.AuthenticationControllerTest">
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextPrepareTestInstance" finished-at="2020-12-03T12:34:04 MSK" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextBeforeTestClass" finished-at="2020-12-03T12:34:04 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:04 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.AuthenticationControllerTest.controllerIsCreated() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:04 MSK" name="setUp" finished-at="2020-12-03T12:34:04 MSK" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="controllerIsCreated()[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:04 MSK" name="controllerIsCreated" finished-at="2020-12-03T12:34:04 MSK" duration-ms="127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- controllerIsCreated -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:04 MSK" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.AuthenticationControllerTest.shouldAddUserToDB() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:04 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:04 MSK" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.AuthenticationControllerTest.controllerIsCreated() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:04 MSK" name="setUp" finished-at="2020-12-03T12:34:04 MSK" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldAddUserToDB()[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:04 MSK" name="shouldAddUserToDB" finished-at="2020-12-03T12:34:05 MSK" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldAddUserToDB -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.AuthenticationControllerTest.shouldAddUserToDB() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.AuthenticationControllerTest.shouldReturnLoginView() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldReturnLoginView()[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:05 MSK" name="shouldReturnLoginView" finished-at="2020-12-03T12:34:05 MSK" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnLoginView -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextBeforeTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.AuthenticationControllerTest.shouldReturnRegistrationView() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.AuthenticationControllerTest.shouldReturnLoginView() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:05 MSK" name="setUp" finished-at="2020-12-03T12:34:05 MSK" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldReturnRegistrationView()[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:05 MSK" name="shouldReturnRegistrationView" finished-at="2020-12-03T12:34:05 MSK" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldReturnRegistrationView -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestMethod" finished-at="2020-12-03T12:34:05 MSK" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void ru.belyaev.controller.AuthenticationControllerTest.shouldReturnRegistrationView() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:ru.belyaev.controller.AuthenticationControllerTest@79207381]" started-at="2020-12-03T12:34:05 MSK" name="springTestContextAfterTestClass" finished-at="2020-12-03T12:34:05 MSK" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- ru.belyaev.controller.AuthenticationControllerTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

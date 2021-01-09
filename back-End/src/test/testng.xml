@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="ApplicationTest" verbose="1">
+    <test name="Controllers">
+        <parameter name="productId" value="1" />
+        <parameter name="count" value="1" />
+        <packages>
+            <package name="ru.belyaev.controller" />
+        </packages>
+    </test>
+    <test name="Services">
+        <packages>
+            <package name="ru.belyaev.service.impl" />
+        </packages>
+    </test>
+</suite>
+
+
+
+
