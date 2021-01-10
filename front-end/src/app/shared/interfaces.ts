@@ -1,8 +1,8 @@
 
 export interface Product {
   id:number
-  brand:string
-  type:string
+  producer: Producer
+  category: Category
   name:string
   length:number
   width:number
@@ -16,4 +16,14 @@ export interface Product {
   imageUrl4:string
   imageUrl5:string
   status:string
+}
+
+export interface Producer {
+  id: number
+  name: String
+}
+
+export interface Category {
+  id: number
+  name: String
 }

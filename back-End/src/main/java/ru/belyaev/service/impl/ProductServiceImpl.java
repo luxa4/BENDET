@@ -15,7 +15,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import ru.belyaev.entity.Category;
 import ru.belyaev.entity.Product;
+import ru.belyaev.repository.CategoryRepository;
 import ru.belyaev.repository.ProductRepository;
 import ru.belyaev.service.ProductService;
 
@@ -30,6 +32,9 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     ProductRepository productRepository;
 
+    @Autowired
+    CategoryRepository categoryRepository;
+
     @Override
     public Long countAllProduct() {
         return productRepository.count();
@@ -39,15 +44,20 @@ public class ProductServiceImpl implements ProductService {
 //    public List<Product> listAllProducts() {
 //        List<Product> products = productRepository.listAllProduct();
 //        return products;
-//    }
 
+//    }
     @Override
-    public Page listAllProductsWithPage(Integer page) {
-        Pageable pageable = PageRequest.of(page,9, Sort.by("price").descending());
+    public Page listAllProducts(Pageable pageable) {
         Page <Product> products = productRepository.findAll(pageable);
 //        List<Product> products = productRepository.listAllProduct(pageable);
 //        LOGGER.info("Pag find-First {}",products1.stream().findFirst());
 //        LOGGER.info("Pag find-First {}",products1.getContent());
+        return products;
+    }
+
+    @Override
+    public Page findProductByCategory(Category category, Pageable pageable) {
+        Page<Product> products = productRepository.findProductByCategory(category, pageable);
         return products;
     }
 
@@ -122,6 +132,11 @@ public class ProductServiceImpl implements ProductService {
     public void deleteProducts(Integer id) {
         Product product = productRepository.findProductById(id);
         productRepository.delete(product);
+    }
+
+    @Override
+    public Category findCategoryById(Integer id) {
+        return categoryRepository.findCategoryById(id);
     }
 
     @Override

@@ -7,6 +7,8 @@
 package ru.belyaev.service;
 
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import ru.belyaev.entity.Category;
 import ru.belyaev.entity.Product;
 
 import java.math.BigDecimal;
@@ -14,11 +16,15 @@ import java.util.List;
 
 public interface ProductService {
 
-    Page listAllProductsWithPage(Integer page);
+    Page listAllProducts(Pageable pageable);
 
     void save(Product product);
 
     void deleteProducts(Integer id);
+
+    Category findCategoryById(Integer id);
+
+    Page findProductByCategory(Category category, Pageable pageable);
 
     List<Product> findProductForSearchTextForm(String fragment);
 
@@ -26,7 +32,6 @@ public interface ProductService {
 
     Long countAllProduct();
 
-//    List<Product> listAllProducts();
 
     Product showProductPageByProductId(int id);
 

@@ -1,7 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col-12 menu text-center">
-      <p ngDefaultControl [class.active]="type ==t" [(ngModel)]="type" *ngFor="let t of types" (click)="type = t">{{t}}</p>
+      <p ngDefaultControl
+         *ngFor="let cat of categories"
+         [(ngModel)]="category"
+         [class.active]="category == cat.name"
+         (click)="showProductByCategory(cat.id); typeLoadMore='byCategory'; id_category=cat.id">
+        {{cat.name}}
+      </p>
     </div>
   </div>
   <div class="row filters">
@@ -28,9 +34,9 @@
            <div class="brandFilter">
              <div class="filterTitle">Бренд</div>
              <div class="mt-19">
-               <select name="" id="" [(ngModel)]="brand">
+               <select name="" id="" [(ngModel)]="producer">
                  <option value="" selected>Все</option>
-                 <option *ngFor="let br of brands" value="{{br}}">{{br}}</option>
+                 <option *ngFor="let producer of producers" value="{{producer}}">{{producer}}</option>
                </select>
              </div>
            </div>
@@ -56,14 +62,14 @@
     <div class="col-4"  *ngFor="let product of products">
       <div class="productCard text-center">
         <div class="text-center"><img [src]="product.imageUrl1" (mouseenter)="changeSrc(product, true)" (mouseout)="changeSrc(product, false)" alt="" width="424px" height="267px"></div>
-        <div class="pr-name">{{product.type}} {{product.name}}</div>
+        <div class="pr-name">{{product.category.name}} {{product.name}}</div>
         <div class="pr-price">{{product.price | currency:'RUR':'symbol-narrow':'1.2-2':'ru'}}</div>
       </div>
     </div>
   </div>
   <div class="row" *ngIf="loadMoreFlag">
     <div class="col-12 text-center">
-      <button class="btn-more-load" (click)="loadMore()">Загрузить еще</button>
+      <button class="btn-more-load" (click)="loadMore(typeLoadMore)">Загрузить еще</button>
     </div>
   </div>
   <div class="row">

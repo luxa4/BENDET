@@ -11,6 +11,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+import ru.belyaev.entity.Category;
+import ru.belyaev.entity.Producer;
 import ru.belyaev.entity.Product;
 
 import java.math.BigDecimal;
@@ -24,6 +26,8 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
     @Override
     Page<Product> findAll(Pageable pageable);
 
+
+    Page<Product> findProductByCategory(Category category, Pageable pageable);
     //    List<Product> findProductByType(Pageable pageable);
 
     Product findProductById(int id);
@@ -46,7 +50,11 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 
     BigDecimal findMaxPrice();
 
+    BigDecimal findMaxPriceByCategory(Category category);
+
     BigDecimal findMinPrice();
+
+    BigDecimal findMinPriceByCategory(Category category);
 
     List<Product> searchFilters(BigDecimal minLen, BigDecimal maxLen, BigDecimal minWidth, BigDecimal maxWidth,
                                 BigDecimal minHeight, BigDecimal maxHeight, BigDecimal minPrice, BigDecimal maxPrice);

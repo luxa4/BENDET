@@ -33,14 +33,16 @@ public class Product implements Serializable {
     @Column
     private Integer id;
 
-    @Column
-    private String brand;
+    @ManyToOne
+    @JoinColumn(name = "id_producer")
+    private Producer producer;
 
     @Column
     private String name;
 
-    @Column
-    private String type;
+    @ManyToOne
+    @JoinColumn(name = "id_category")
+    private Category category;
 
     @Column
     private BigDecimal length;
@@ -84,12 +86,71 @@ public class Product implements Serializable {
     public Product() {
     }
 
-    public String getType() {
-        return type;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Objects.equals(producer, product.producer) &&
+                Objects.equals(name, product.name) &&
+                Objects.equals(category, product.category) &&
+                Objects.equals(length, product.length) &&
+                Objects.equals(width, product.width) &&
+                Objects.equals(height, product.height) &&
+                Objects.equals(weight, product.weight) &&
+                Objects.equals(price, product.price) &&
+                Objects.equals(status, product.status) &&
+                Objects.equals(imageUrl1, product.imageUrl1) &&
+                Objects.equals(imageUrl2, product.imageUrl2) &&
+                Objects.equals(imageUrl3, product.imageUrl3) &&
+                Objects.equals(imageUrl4, product.imageUrl4) &&
+                Objects.equals(imageUrl5, product.imageUrl5) &&
+                Objects.equals(description, product.description) &&
+                Objects.equals(totalCount, product.totalCount);
     }
 
-    public void setType(String type) {
-        this.type = type;
+    @Override
+    public int hashCode() {
+        return Objects.hash(producer, name, category, length, width, height, weight, price, status, imageUrl1, imageUrl2, imageUrl3, imageUrl4, imageUrl5, description, totalCount);
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", producer=" + producer +
+                ", name='" + name + '\'' +
+                ", category=" + category +
+                ", length=" + length +
+                ", width=" + width +
+                ", height=" + height +
+                ", weight=" + weight +
+                ", price=" + price +
+                ", status='" + status + '\'' +
+                ", imageUrl1='" + imageUrl1 + '\'' +
+                ", imageUrl2='" + imageUrl2 + '\'' +
+                ", imageUrl3='" + imageUrl3 + '\'' +
+                ", imageUrl4='" + imageUrl4 + '\'' +
+                ", imageUrl5='" + imageUrl5 + '\'' +
+                ", description='" + description + '\'' +
+                ", totalCount=" + totalCount +
+                '}';
+    }
+
+    public Producer getProducer() {
+        return producer;
+    }
+
+    public void setProducer(Producer producer) {
+        this.producer = producer;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public Integer getId() {
@@ -156,14 +217,6 @@ public class Product implements Serializable {
         this.status = status;
     }
 
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
     public BigDecimal getWeight() {
         return weight;
     }
@@ -220,45 +273,4 @@ public class Product implements Serializable {
         this.description = description;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        return Objects.equals(brand, product.brand) &&
-                Objects.equals(name, product.name) &&
-                Objects.equals(type, product.type) &&
-                Objects.equals(length, product.length) &&
-                Objects.equals(width, product.width) &&
-                Objects.equals(height, product.height) &&
-                Objects.equals(weight, product.weight) &&
-                Objects.equals(price, product.price) &&
-                Objects.equals(status, product.status) &&
-                Objects.equals(imageUrl1, product.imageUrl1) &&
-                Objects.equals(imageUrl2, product.imageUrl2) &&
-                Objects.equals(imageUrl3, product.imageUrl3) &&
-                Objects.equals(imageUrl4, product.imageUrl4) &&
-                Objects.equals(imageUrl5, product.imageUrl5) &&
-                Objects.equals(description, product.description) &&
-                Objects.equals(totalCount, product.totalCount);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(brand, name, type, length, width, height, weight, price, status, imageUrl1, imageUrl2, imageUrl3, imageUrl4, imageUrl5, description, totalCount);
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", length=" + length +
-                ", width=" + width +
-                ", height=" + height +
-                ", price=" + price +
-                ", status='" + status + '\'' +
-                ", imageUrl='" + imageUrl1 + '\'' +
-                '}';
-    }
 }

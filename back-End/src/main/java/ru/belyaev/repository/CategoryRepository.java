@@ -11,5 +11,7 @@ public interface CategoryRepository extends JpaRepository<Category, Integer> {
 
     @Override
     List<Category> findAll();
+
+    Category findCategoryById(Integer id);
 }
 

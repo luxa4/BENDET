@@ -8,13 +8,22 @@ package ru.belyaev.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import ru.belyaev.entity.Category;
+import ru.belyaev.entity.Producer;
 import ru.belyaev.entity.Product;
 import ru.belyaev.service.ProductService;
+import ru.belyaev.service.impl.CategoryService;
+import ru.belyaev.service.impl.ProducerServiceImpl;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,28 +35,63 @@ public class ProductController {
     @Autowired
     ProductService productService;
 
+    @Autowired
+    CategoryService categoryService;
+
+    @Autowired
+    ProducerServiceImpl producerService;
+
 //    @GetMapping("/api/products")
 //    public @ResponseBody List<Product> getProduct() {
 //        List<Product> productList = productService.listAllProducts();
 //        return productList;
 //    }
 
-    @GetMapping("/api/productsWithPagination/{page}")
-    public @ResponseBody Page getProduct1(@PathVariable Integer page) {
-        Page<Product> productList = productService.listAllProductsWithPage(page);
+    @GetMapping("/api/categories")
+    public @ResponseBody List<Category> getAllCategories() {
+        return categoryService.getAllCategories();
+    }
+
+    @GetMapping("/api/producers/")
+    public @ResponseBody List<Producer> getProducerByCategory(@Param("id_category") Integer id_category) {
+        Category category = categoryService.getCategoryById(id_category);
+        return producerService.getProducersByCategory(category);
+    }
+
+
+
+    @GetMapping("/api/prices")
+    public @ResponseBody List<BigDecimal> getMinAndMaxPrices() {
+        List<BigDecimal> prices = new ArrayList<>();
+        prices.add(productService.showMinPrice());
+        prices.add(productService.showMaxPrice());
+        return prices;
+    }
+
+//    @GetMapping("/api/producers")
+//    public List<Producer> getAllProducers() {
+//
+//    }
+
+    @GetMapping("/api/products/{page}")
+    public @ResponseBody Page getAllProduct(@PathVariable Integer page) {
+        Pageable pageable = PageRequest.of(page,9);
+        Page<Product> productList = productService.listAllProducts(pageable);
         return productList;
     }
 
-    @GetMapping("/api/products/{id}")
-    public @ResponseBody Product getProduct(@PathVariable Integer id) {
-        Product product = productService.showProductPageByProductId(id);
-        return product;
+    @GetMapping("/api/products/{id_category}/{page}")
+    public @ResponseBody Page getProductByCategory(@PathVariable(name = "id_category") Integer id_category, @PathVariable(name = "page") Integer page) {
+        Pageable pageable = PageRequest.of(page, 9);
+        Category category = productService.findCategoryById(id_category);
+        Page<Product> productList = productService.findProductByCategory(category, pageable);
+        return productList;
     }
 
     @PutMapping("/api/products/update/{id}")
     public ResponseEntity<Map<String, Boolean>> getProduct(@PathVariable Integer id, @RequestBody Product productInfo) {
         Product product = productService.showProductPageByProductId(id);
-        product.setBrand(productInfo.getBrand());
+        product.setCategory(productInfo.getCategory());
         product.setName(productInfo.getName());
         product.setLength(productInfo.getLength());
         product.setWidth(productInfo.getWidth());
@@ -61,7 +105,7 @@ public class ProductController {
         product.setImageUrl4(productInfo.getImageUrl4());
         product.setImageUrl5(productInfo.getImageUrl5());
         product.setStatus(productInfo.getStatus());
-        product.setType(productInfo.getType());
+        product.setProducer(productInfo.getProducer());
         productService.save(product);
         Map<String, Boolean> response = new HashMap<>();
         response.put("updated", Boolean.TRUE);

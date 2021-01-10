@@ -1,5 +1,5 @@
 import {Injectable, OnInit} from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {Product} from './interfaces';
 import {catchError, tap} from 'rxjs/operators';
@@ -13,16 +13,33 @@ export class ProductService implements OnInit{
   ngOnInit(): void {
   }
 
-  getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>('http://localhost:8080/api/products')
-  }
-
-  getProductsWithPag(page: number): Observable<any> {
-    return this.http.get(`http://localhost:8080/api/productsWithPagination/${page}`)
+  getCategories(): Observable<any> {
+    return this.http.get(`http://localhost:8080/api/categories`)
       .pipe(
         tap(resp => console.log(resp))
       )
+  }
 
+  getProducersByCategory(id_category: number): Observable<any> {
+    return this.http.get(`http://localhost:8080/api/producers/`, {params: new HttpParams().set('id_category', `${id_category}`)})
+      .pipe(
+        tap(resp => console.log(resp))
+      )
+  }
+
+  getPrices(): Observable<any> {
+    return this.http.get(`http://localhost:8080/api/categories`)
+      .pipe(
+        tap(resp => console.log(resp))
+      )
+  }
+
+  getProducts(page: number): Observable<any> {
+    return this.http.get(`http://localhost:8080/api/products/${page}`)
+  }
+
+  getProductsByCategory(id_category: number, page: number): Observable<any> {
+    return this.http.get(`http://localhost:8080/api/products/${id_category}/${page}`)
   }
 
   getProductById(id: number):Observable<Product> {
