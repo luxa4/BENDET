@@ -33,10 +33,10 @@ export class HomePageComponent implements OnInit, OnDestroy {
   category: string = ''
   minPrice
   maxPrice
-  sortPriceUp: boolean
-  sortPriceDown: boolean
-  sortNameUp: boolean
-  sortNameDown: boolean
+  sortPriceUp = false
+  sortPriceDown = false
+  sortNameUp = false
+  sortNameDown = false
   loadMoreFlag = true
   loadMoreCount = 0
   totalPages: number = 0
@@ -93,8 +93,10 @@ export class HomePageComponent implements OnInit, OnDestroy {
     this.minPrice =  Math.min(...this.prices)
     this.maxPrice =  Math.max(...this.prices)
     this.loadMoreFlag = true
-    console.log(this.minPrice)
-    console.log(this.maxPrice)
+    this.sortPriceUp = false
+    this.sortPriceDown = false
+    this.sortNameUp = false
+    this.sortNameDown = false
   }
 
   changePriceMin(min:number) {
@@ -110,13 +112,60 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   }
 
+  sortByPriceAndName(productsFiltered: Product[]):Product[] {
+    switch (true) {
+      case this.sortPriceUp:
+        return productsFiltered.sort((a, b) => {
+          if (a.price > b.price) {
+            return 1
+          }
+          if (a.price < b.price) {
+            return -1
+          }
+          return 0
+        })
+      case this.sortPriceDown:
+        return productsFiltered.sort((a, b) => {
+          if (a.price < b.price) {
+            return 1
+          }
+          if (a.price > b.price) {
+            return -1
+          }
+          return 0
+        })
+      case this.sortNameUp:
+        return productsFiltered.sort((a, b) => {
+          if (a.name > b.name) {
+            return 1
+          }
+          if (a.name < b.name) {
+            return -1
+          }
+          return 0
+        })
+      case this.sortNameDown:
+        return productsFiltered.sort((a, b) => {
+          if (a.name < b.name) {
+            return 1
+          }
+          if (a.name > b.name) {
+            return -1
+          }
+          return 0
+        })
+      default:
+        return productsFiltered
+    }
+  }
+
   loadMore() {
     this.loadMoreCount++
     var temp = this.productsFiltered
           .filter( (v, i, arr) => i >= (this.loadMoreCount * this.productOnPage) &&  i < (this.loadMoreCount * this.productOnPage+this.productOnPage))
-        this.products.push(...temp)
-        console.log("контент", temp)
-        console.log("с пушем",this.products)
+    this.products.push(...temp)
+    console.log("контент", temp)
+    console.log("с пушем",this.products)
 
     console.log(this.loadMoreCount, this.totalPages)
     if (this.loadMoreCount+1 >= this.totalPages) {
@@ -127,57 +176,46 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   showProductByCategory(cat: String) {
     this.productsFiltered = this.allProducts.filter( pr => pr.category.name === cat)
-    this.products = this.productsFiltered
-
-    this.totalPages = this.getTotalPages(this.products.length, this.productOnPage)
-    if (this.totalPages >=2) {
-      this.loadMoreFlag = true
-    }
-    this.products = this.productsFiltered.filter( (v, i, arr) => i< this.productOnPage)
+    this.setsFilter(this.productsFiltered)
   }
 
-  changeProducer(producer: string) {
+  applyFilter() {
     this.loadMoreCount = 0
-    if (!producer.trim() && this.category == '') {
+    if (!this.producer.trim() && this.category == '') {
       this.productsFiltered = this.allProducts
+        .filter(pr => pr.price >= this.minPrice && pr.price <= this.maxPrice)
+
+
       this.setsFilter(this.productsFiltered)
 
     } else if (this.category == '') {
-      this.productsFiltered = this.allProducts.filter( pr => pr.producer.name === producer)
+      this.productsFiltered = this.allProducts
+        .filter(pr => pr.price >= this.minPrice && pr.price <= this.maxPrice)
+        .filter( pr => pr.producer.name === this.producer)
       this.setsFilter(this.productsFiltered)
-      
-    } else if (!producer.trim()) {
-      this.productsFiltered = this.allProducts.filter( pr => pr.category.name === this.category)
+
+    } else if (!this.producer.trim()) {
+      this.productsFiltered = this.allProducts
+        .filter(pr => pr.price >= this.minPrice && pr.price <= this.maxPrice)
+        .filter( pr => pr.category.name === this.category)
       this.setsFilter(this.productsFiltered)
 
     } else {
       this.productsFiltered = this.allProducts
+        .filter(pr => pr.price >= this.minPrice && pr.price <= this.maxPrice)
         .filter( pr => pr.category.name === this.category)
-        .filter( pr => pr.producer.name === producer)
+        .filter( pr => pr.producer.name === this.producer)
       this.setsFilter(this.productsFiltered)
     }
   }
 
   private setsFilter(productsFiltered: Product[]) {
+    productsFiltered = this.sortByPriceAndName(productsFiltered)
     this.products = productsFiltered
     this.totalPages = this.getTotalPages(this.products.length, this.productOnPage)
     this.totalPages >=2 ? this.loadMoreFlag = true : this.loadMoreFlag = false
     this.products = this.products.filter( (v, i, arr) => i< this.productOnPage)
   }
 
-  toSortPriceUp() {
 
-  }
-
-  toSortNameUp() {
-
-  }
-
-  toSortPriceDown() {
-
-  }
-
-  toSortNameDown() {
-
-  }
 }
