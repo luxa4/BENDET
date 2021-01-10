@@ -41,6 +41,11 @@ public class ProductController {
     @Autowired
     ProducerServiceImpl producerService;
 
+    @GetMapping("/")
+    public String greetingPage() {
+        return "index";
+    }
+
     @GetMapping("/api/products")
     public @ResponseBody List<Product> getAllProduct() {
         List<Product> productList = productService.getAllProducts();

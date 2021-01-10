@@ -155,4 +155,31 @@ export class HomePageComponent implements OnInit, OnDestroy {
     this.products = this.productsInCategory.filter( (v, i, arr) => i< this.productOnPage)
     console.log('После перехода на категорию', this.products)
   }
+
+  changeProducer(producer: string) {
+    if (!producer.trim()) {
+      this.products = this.allProducts
+        .filter( (v, i, arr) => i< this.productOnPage)
+    } else {
+      this.products = this.allProducts
+        .filter( pr => pr.producer.name === producer)
+        .filter( (v, i, arr) => i< this.productOnPage)
+    }
+  }
+
+  toSortPriceUp() {
+
+  }
+
+  toSortNameUp() {
+
+  }
+
+  toSortPriceDown() {
+
+  }
+
+  toSortNameDown() {
+
+  }
 }

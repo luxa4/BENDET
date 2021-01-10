@@ -34,7 +34,7 @@
            <div class="brandFilter">
              <div class="filterTitle">Бренд</div>
              <div class="mt-19">
-               <select name="" id="" [(ngModel)]="producer">
+               <select name="" id="" [(ngModel)]="producer" (change)="changeProducer(producer)">
                  <option value="" selected>Все</option>
                  <option *ngFor="let producer of producers" value="{{producer}}">{{producer}}</option>
                </select>
@@ -46,10 +46,10 @@
             <div class="filterTitle">Сортировка</div>
             <div class="container-fluid mt-19">
               <div class="row ">
-                <div class="col-4 p-0 sortPrice" (click)="sortPriceUp = true; sortPriceDown= false">по цене <i class="fas fa-long-arrow-alt-up"></i></div>
-                <div class="col-8 sortPrice text-left" (click)="sortNameUp = true; sortNameDown = false">по названию <i class="fas fa-long-arrow-alt-up"></i></div>
-                <div class="col-4 p-0 sortPrice" (click)="sortPriceDown = true; sortPriceUp = false">по цене <i class="fas fa-long-arrow-alt-down"></i></div>
-                <div class="col-8 sortPrice text-left" (click)="sortNameDown = true; sortNameUp = false">по названию <i class="fas fa-long-arrow-alt-down"></i></div>
+                <div class="col-4 p-0 sortPrice" (click)="toSortPriceUp() ;sortPriceUp = true; sortPriceDown= false">по цене <i class="fas fa-long-arrow-alt-up"></i></div>
+                <div class="col-8 sortPrice text-left" (click)="toSortNameUp();sortNameUp = true; sortNameDown = false">по названию <i class="fas fa-long-arrow-alt-up"></i></div>
+                <div class="col-4 p-0 sortPrice" (click)="toSortPriceDown();sortPriceDown = true; sortPriceUp = false">по цене <i class="fas fa-long-arrow-alt-down"></i></div>
+                <div class="col-8 sortPrice text-left" (click)="toSortNameDown(); sortNameDown = true; sortNameUp = false">по названию <i class="fas fa-long-arrow-alt-down"></i></div>
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@
   </div>
   <div class="row" *ngIf="maxPrice && minPrice">
     <div class="col-4"
-         *ngFor="let product of products | priceFilter: minPrice : maxPrice | brandFilter: producer | sortNameDown: sortNameDown | sortNameUp: sortNameUp | sortPriceUp: sortPriceUp | sortPriceDown: sortPriceDown">
+         *ngFor="let product of products">
       <div class="productCard text-center">
         <div class="text-center"><img [src]="product.imageUrl1" (mouseenter)="changeSrc(product, true)" (mouseout)="changeSrc(product, false)" alt="" width="424px" height="267px"></div>
         <div class="pr-name">{{product.category.name}} {{product.name}}</div>

@@ -23,7 +23,6 @@ public class MyDispatcherServlet extends AbstractAnnotationConfigDispatcherServl
     @Override
     protected Class<?>[] getServletConfigClasses() {
         return new Class[] {ApplicationConfig.class,
-                            WebFlowConfig.class,
                             SecurityConfig.class};
     }
 
