@@ -140,53 +140,29 @@ export class HomePageComponent implements OnInit, OnDestroy {
     this.loadMoreCount = 0
     if (!producer.trim() && this.category == '') {
       this.productsFiltered = this.allProducts
-      this.products = this.productsFiltered
-      this.totalPages = this.getTotalPages(this.products.length, this.productOnPage)
-      if (this.totalPages >= 2) {
-        this.loadMoreFlag = true
-      }
-      console.log(`Не выбрана Категория и стоит ВСЕ - товаров ${this.productsFiltered.length} , страниц - ${this.totalPages}`)
-      this.products = this.productsFiltered
-        .filter((v, i, arr) => i < this.productOnPage)
+      this.setsFilter(this.productsFiltered)
+
     } else if (this.category == '') {
       this.productsFiltered = this.allProducts.filter( pr => pr.producer.name === producer)
-      this.products = this.productsFiltered
-      this.totalPages = this.getTotalPages(this.products.length, this.productOnPage)
-      if (this.totalPages >=2) {
-        this.loadMoreFlag = true
-      } else {
-        this.loadMoreFlag = false
-      }
-      console.log(`Не выбрана Категория и выбран производитель - товаров ${this.productsFiltered.length} , страниц - ${this.totalPages}`)
-      this.products = this.products
-        .filter( (v, i, arr) => i< this.productOnPage)
+      this.setsFilter(this.productsFiltered)
+      
     } else if (!producer.trim()) {
+      this.productsFiltered = this.allProducts.filter( pr => pr.category.name === this.category)
+      this.setsFilter(this.productsFiltered)
+
+    } else {
       this.productsFiltered = this.allProducts
         .filter( pr => pr.category.name === this.category)
-      this.products = this.productsFiltered
-      this.totalPages = this.getTotalPages(this.products.length, this.productOnPage)
-      if (this.totalPages >= 2) {
-        this.loadMoreFlag = true
-      } else {
-        this.loadMoreFlag = false
-      }
-      console.log(`Выбрана Категория и стоит ВСЕ - товаров ${this.productsFiltered.length} , страниц - ${this.totalPages}`)
-      this.products = this.productsFiltered
-        .filter( (v, i, arr) => i< this.productOnPage)
-    } else {
-      this.productsFiltered = this.allProducts.filter( pr => pr.category.name === this.category)
-      this.productsFiltered = this.productsFiltered.filter( pr => pr.producer.name === producer)
-      this.products = this.productsFiltered
-      this.totalPages = this.getTotalPages(this.products.length, this.productOnPage)
-      if (this.totalPages >=2) {
-        this.loadMoreFlag = true
-      } else {
-        this.loadMoreFlag = false
-      }
-      console.log(`Выбрана Категория и выбран производ - товаров ${this.productsFiltered.length} , страниц - ${this.totalPages}`)
-      this.products = this.products
-        .filter( (v, i, arr) => i< this.productOnPage)
+        .filter( pr => pr.producer.name === producer)
+      this.setsFilter(this.productsFiltered)
     }
+  }
+
+  private setsFilter(productsFiltered: Product[]) {
+    this.products = productsFiltered
+    this.totalPages = this.getTotalPages(this.products.length, this.productOnPage)
+    this.totalPages >=2 ? this.loadMoreFlag = true : this.loadMoreFlag = false
+    this.products = this.products.filter( (v, i, arr) => i< this.productOnPage)
   }
 
   toSortPriceUp() {
