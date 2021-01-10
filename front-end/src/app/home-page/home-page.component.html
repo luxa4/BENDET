@@ -5,9 +5,10 @@
          *ngFor="let cat of categories"
          [(ngModel)]="category"
          [class.active]="category == cat"
-         (click)="showProductByCategory(cat);category= cat; typeLoadMore = 'byCategory'">
+         (click)="showProductByCategory(cat); category= cat">
         {{cat}}
       </p>
+      <h1>{{productsFiltered.length}}</h1>
     </div>
   </div>
   <div class="row filters">
@@ -60,17 +61,17 @@
   </div>
   <div class="row" *ngIf="maxPrice && minPrice">
     <div class="col-4"
-         *ngFor="let product of products">
+         *ngFor="let product of products; let idx=index">
       <div class="productCard text-center">
         <div class="text-center"><img [src]="product.imageUrl1" (mouseenter)="changeSrc(product, true)" (mouseout)="changeSrc(product, false)" alt="" width="424px" height="267px"></div>
-        <div class="pr-name">{{product.category.name}} {{product.name}}</div>
+        <div class="pr-name">{{idx+1}} - {{product.category.name}} {{product.name}}</div>
         <div class="pr-price">{{product.price | currency:'RUR':'symbol-narrow':'1.2-2':'ru'}}</div>
       </div>
     </div>
   </div>
   <div class="row" *ngIf="loadMoreFlag">
     <div class="col-12 text-center">
-      <button class="btn-more-load" (click)="loadMore(typeLoadMore)">Загрузить еще</button>
+      <button class="btn-more-load" (click)="loadMore()">Загрузить еще</button>
     </div>
   </div>
   <div class="row">

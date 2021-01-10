@@ -18,6 +18,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
   private allProducts: Product[]
   public products:  Product[]
   public productsInCategory: Product[]
+  public productsFiltered: Product[]
   public allProducers:  String[]=[]
   public producers:  String[]=[]
   public categories: String[]=[]
@@ -47,6 +48,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.prodSub = this.prodService.getProducts().subscribe(products => {
       this.allProducts = products
+      this.productsFiltered = this.allProducts
       this.products = this.allProducts.filter( (v, i, arr) => i < this.productOnPage)
 
       this.producers = this.allProducers = products
@@ -82,14 +84,14 @@ export class HomePageComponent implements OnInit, OnDestroy {
   }
 
   resetFilters() {
-    this.products = this.allProducts.filter( (v, i, arr) => i< this.productOnPage)
+    this.productsFiltered = this.allProducts
+    this.products = this.productsFiltered.filter( (v, i, arr) => i < this.productOnPage)
     this.totalPages = this.getTotalPages(this.allProducts.length, this.productOnPage)
     this.producer = ''
     this.category = ''
     this.string = ''
     this.minPrice =  Math.min(...this.prices)
     this.maxPrice =  Math.max(...this.prices)
-    this.typeLoadMore = 'allProduct'
     this.loadMoreFlag = true
     console.log(this.minPrice)
     console.log(this.maxPrice)
@@ -108,33 +110,13 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   }
 
-  loadMore(typeLoadMore: String) {
+  loadMore() {
     this.loadMoreCount++
-
-    switch (typeLoadMore) {
-      case "allProduct":
-        console.log(`Случай - allProducts`);
-        var temp = this.allProducts
+    var temp = this.productsFiltered
           .filter( (v, i, arr) => i >= (this.loadMoreCount * this.productOnPage) &&  i < (this.loadMoreCount * this.productOnPage+this.productOnPage))
         this.products.push(...temp)
         console.log("контент", temp)
         console.log("с пушем",this.products)
-        break;
-
-      case "byCategory":
-        console.log(`Случай - byCategory`);
-        console.log("Produts при нажатии кнопки загрузить: ", this.products)
-        console.log("loadMoreCount при нажатии кнопки загрузить: ", this.loadMoreCount)
-
-        console.log("Всего в текущей категории",this.productsInCategory);
-        var tempCat = this.productsInCategory
-          .filter( (v, i, arr) => i >= (this.loadMoreCount * this.productOnPage) &&  i < (this.loadMoreCount * this.productOnPage+this.productOnPage))
-        console.log("Отфильтрованный для добавления:", tempCat)
-        console.log("Produts до добаления: ", this.products)
-        this.products.push(...tempCat)
-        console.log("Produts после добаления:", this.products)
-        break;
-    }
 
     console.log(this.loadMoreCount, this.totalPages)
     if (this.loadMoreCount+1 >= this.totalPages) {
@@ -144,25 +126,65 @@ export class HomePageComponent implements OnInit, OnDestroy {
   }
 
   showProductByCategory(cat: String) {
-    this.productsInCategory = this.allProducts.filter( pr => pr.category.name === cat)
-    this.products = this.productsInCategory
+    this.productsFiltered = this.allProducts.filter( pr => pr.category.name === cat)
+    this.products = this.productsFiltered
 
     this.totalPages = this.getTotalPages(this.products.length, this.productOnPage)
     if (this.totalPages >=2) {
       this.loadMoreFlag = true
     }
-    console.log('Categories pages', this.totalPages)
-    this.products = this.productsInCategory.filter( (v, i, arr) => i< this.productOnPage)
-    console.log('После перехода на категорию', this.products)
+    this.products = this.productsFiltered.filter( (v, i, arr) => i< this.productOnPage)
   }
 
   changeProducer(producer: string) {
-    if (!producer.trim()) {
-      this.products = this.allProducts
+    this.loadMoreCount = 0
+    if (!producer.trim() && this.category == '') {
+      this.productsFiltered = this.allProducts
+      this.products = this.productsFiltered
+      this.totalPages = this.getTotalPages(this.products.length, this.productOnPage)
+      if (this.totalPages >= 2) {
+        this.loadMoreFlag = true
+      }
+      console.log(`Не выбрана Категория и стоит ВСЕ - товаров ${this.productsFiltered.length} , страниц - ${this.totalPages}`)
+      this.products = this.productsFiltered
+        .filter((v, i, arr) => i < this.productOnPage)
+    } else if (this.category == '') {
+      this.productsFiltered = this.allProducts.filter( pr => pr.producer.name === producer)
+      this.products = this.productsFiltered
+      this.totalPages = this.getTotalPages(this.products.length, this.productOnPage)
+      if (this.totalPages >=2) {
+        this.loadMoreFlag = true
+      } else {
+        this.loadMoreFlag = false
+      }
+      console.log(`Не выбрана Категория и выбран производитель - товаров ${this.productsFiltered.length} , страниц - ${this.totalPages}`)
+      this.products = this.products
+        .filter( (v, i, arr) => i< this.productOnPage)
+    } else if (!producer.trim()) {
+      this.productsFiltered = this.allProducts
+        .filter( pr => pr.category.name === this.category)
+      this.products = this.productsFiltered
+      this.totalPages = this.getTotalPages(this.products.length, this.productOnPage)
+      if (this.totalPages >= 2) {
+        this.loadMoreFlag = true
+      } else {
+        this.loadMoreFlag = false
+      }
+      console.log(`Выбрана Категория и стоит ВСЕ - товаров ${this.productsFiltered.length} , страниц - ${this.totalPages}`)
+      this.products = this.productsFiltered
         .filter( (v, i, arr) => i< this.productOnPage)
     } else {
-      this.products = this.allProducts
-        .filter( pr => pr.producer.name === producer)
+      this.productsFiltered = this.allProducts.filter( pr => pr.category.name === this.category)
+      this.productsFiltered = this.productsFiltered.filter( pr => pr.producer.name === producer)
+      this.products = this.productsFiltered
+      this.totalPages = this.getTotalPages(this.products.length, this.productOnPage)
+      if (this.totalPages >=2) {
+        this.loadMoreFlag = true
+      } else {
+        this.loadMoreFlag = false
+      }
+      console.log(`Выбрана Категория и выбран производ - товаров ${this.productsFiltered.length} , страниц - ${this.totalPages}`)
+      this.products = this.products
         .filter( (v, i, arr) => i< this.productOnPage)
     }
   }
