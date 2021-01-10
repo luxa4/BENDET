@@ -4,9 +4,9 @@
       <p ngDefaultControl
          *ngFor="let cat of categories"
          [(ngModel)]="category"
-         [class.active]="category == cat.name"
-         (click)="showProductByCategory(cat.id); typeLoadMore='byCategory'; id_category=cat.id">
-        {{cat.name}}
+         [class.active]="category == cat"
+         (click)="showProductByCategory(cat);category= cat; typeLoadMore = 'byCategory'">
+        {{cat}}
       </p>
     </div>
   </div>
@@ -59,7 +59,8 @@
         </div>
   </div>
   <div class="row" *ngIf="maxPrice && minPrice">
-    <div class="col-4"  *ngFor="let product of products">
+    <div class="col-4"
+         *ngFor="let product of products | priceFilter: minPrice : maxPrice | brandFilter: producer | sortNameDown: sortNameDown | sortNameUp: sortNameUp | sortPriceUp: sortPriceUp | sortPriceDown: sortPriceDown">
       <div class="productCard text-center">
         <div class="text-center"><img [src]="product.imageUrl1" (mouseenter)="changeSrc(product, true)" (mouseout)="changeSrc(product, false)" alt="" width="424px" height="267px"></div>
         <div class="pr-name">{{product.category.name}} {{product.name}}</div>

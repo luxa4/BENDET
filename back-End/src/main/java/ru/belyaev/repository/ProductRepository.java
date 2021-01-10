@@ -10,6 +10,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import ru.belyaev.entity.Category;
 import ru.belyaev.entity.Producer;
@@ -25,10 +26,6 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 
     @Override
     Page<Product> findAll(Pageable pageable);
-
-
-    Page<Product> findProductByCategory(Category category, Pageable pageable);
-    //    List<Product> findProductByType(Pageable pageable);
 
     Product findProductById(int id);
 

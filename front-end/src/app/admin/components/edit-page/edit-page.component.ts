@@ -35,8 +35,8 @@ export class EditPageComponent implements OnInit {
       console.log(pr.name)
       this.form = new FormGroup({
         name: new FormControl(pr.name),
-        type: new FormControl(pr.type),
-        brand: new FormControl(pr.brand),
+        type: new FormControl(pr.category.name),
+        brand: new FormControl(pr.producer.name),
         width: new FormControl(pr.width),
         length: new FormControl(pr.length),
         height: new FormControl(pr.height),
@@ -57,8 +57,8 @@ export class EditPageComponent implements OnInit {
     const updateProduct: Product = {
       id: this.product.id,
       name: this.form.value.name,
-      type: this.form.value.type,
-      brand: this.form.value.brand,
+      category: this.form.value.type,
+      producer: this.form.value.producer,
       width: this.form.value.width,
       length: this.form.value.length,
       height: this.form.value.height,

@@ -8,7 +8,7 @@ export class BrandFilterPipe implements PipeTransform {
       return product
     }
     return product.filter( pr => {
-      return pr.brand.toLowerCase() === brand.toLowerCase()
+      return pr.producer.name.toLowerCase() === brand.toLowerCase()
     })
   }
 

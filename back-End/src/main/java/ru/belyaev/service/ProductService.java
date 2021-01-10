@@ -8,6 +8,7 @@ package ru.belyaev.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.repository.query.Param;
 import ru.belyaev.entity.Category;
 import ru.belyaev.entity.Product;
 
@@ -16,7 +17,7 @@ import java.util.List;
 
 public interface ProductService {
 
-    Page listAllProducts(Pageable pageable);
+    List<Product> getAllProducts();
 
     void save(Product product);
 

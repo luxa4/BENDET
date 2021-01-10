@@ -20,7 +20,7 @@ export class ListPageComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.prodSub = this.prodService.getProducts(9).subscribe( pr => {
+    this.prodSub = this.prodService.getProducts().subscribe( pr => {
       this.products = pr
     })
   }

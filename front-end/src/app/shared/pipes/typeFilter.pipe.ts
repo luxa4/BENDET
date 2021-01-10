@@ -8,7 +8,7 @@ export class TypeFilterPipe implements PipeTransform {
       return product
     }
     return product.filter( pr => {
-      return pr.type.toLowerCase() === type.toLowerCase()
+      return pr.category.name.toLowerCase() === type.toLowerCase()
     })
   }
 

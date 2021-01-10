@@ -34,8 +34,8 @@ export class ProductService implements OnInit{
       )
   }
 
-  getProducts(page: number): Observable<any> {
-    return this.http.get(`http://localhost:8080/api/products/${page}`)
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(`http://localhost:8080/api/products`)
   }
 
   getProductsByCategory(id_category: number, page: number): Observable<any> {

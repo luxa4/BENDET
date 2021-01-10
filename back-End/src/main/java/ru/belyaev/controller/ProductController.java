@@ -41,50 +41,9 @@ public class ProductController {
     @Autowired
     ProducerServiceImpl producerService;
 
-//    @GetMapping("/api/products")
-//    public @ResponseBody List<Product> getProduct() {
-//        List<Product> productList = productService.listAllProducts();
-//        return productList;
-//    }
-
-    @GetMapping("/api/categories")
-    public @ResponseBody List<Category> getAllCategories() {
-        return categoryService.getAllCategories();
-    }
-
-    @GetMapping("/api/producers/")
-    public @ResponseBody List<Producer> getProducerByCategory(@Param("id_category") Integer id_category) {
-        Category category = categoryService.getCategoryById(id_category);
-        return producerService.getProducersByCategory(category);
-    }
-
-
-
-    @GetMapping("/api/prices")
-    public @ResponseBody List<BigDecimal> getMinAndMaxPrices() {
-        List<BigDecimal> prices = new ArrayList<>();
-        prices.add(productService.showMinPrice());
-        prices.add(productService.showMaxPrice());
-        return prices;
-    }
-
-//    @GetMapping("/api/producers")
-//    public List<Producer> getAllProducers() {
-//
-//    }
-
-    @GetMapping("/api/products/{page}")
-    public @ResponseBody Page getAllProduct(@PathVariable Integer page) {
-        Pageable pageable = PageRequest.of(page,9);
-        Page<Product> productList = productService.listAllProducts(pageable);
-        return productList;
-    }
-
-    @GetMapping("/api/products/{id_category}/{page}")
-    public @ResponseBody Page getProductByCategory(@PathVariable(name = "id_category") Integer id_category, @PathVariable(name = "page") Integer page) {
-        Pageable pageable = PageRequest.of(page, 9);
-        Category category = productService.findCategoryById(id_category);
-        Page<Product> productList = productService.findProductByCategory(category, pageable);
+    @GetMapping("/api/products")
+    public @ResponseBody List<Product> getAllProduct() {
+        List<Product> productList = productService.getAllProducts();
         return productList;
     }
 
@@ -120,5 +79,59 @@ public class ProductController {
         response.put("deleted", Boolean.TRUE);
         return ResponseEntity.ok(response);
     }
+
+
+//    @GetMapping("/api/products")
+//    public @ResponseBody List<Product> getProduct() {
+//        List<Product> productList = productService.listAllProducts();
+//        return productList;
+//    }
+
+//    @GetMapping("/api/productsFilter/{page}")
+//    public @ResponseBody Page getAllProductFilter(@PathVariable Integer page,
+//                                                  @Param("id_category") List<Integer> id_categoryList,
+//                                                  @Param("id_producer") List<Integer> id_producerList,
+//                                                  @Param("min_price") BigDecimal min_price,
+//                                                  @Param("max_price") BigDecimal max_price) {
+//        Pageable pageable = PageRequest.of(page,9);
+//        Page<Product> productList = productService.listAllProducts(pageable);
+//        return productList;
+//    }
+
+//
+//    @GetMapping("/api/categories")
+//    public @ResponseBody List<Category> getAllCategories() {
+//        return categoryService.getAllCategories();
+//    }
+//
+//    @GetMapping("/api/producers/")
+//    public @ResponseBody List<Producer> getProducerByCategory(@Param("id_category") Integer id_category) {
+//        Category category = categoryService.getCategoryById(id_category);
+//        return producerService.getProducersByCategory(category);
+//    }
+
+
+
+//    @GetMapping("/api/prices")
+//    public @ResponseBody List<BigDecimal> getMinAndMaxPrices() {
+//        List<BigDecimal> prices = new ArrayList<>();
+//        prices.add(productService.showMinPrice());
+//        prices.add(productService.showMaxPrice());
+//        return prices;
+//    }
+
+//    @GetMapping("/api/producers")
+//    public List<Producer> getAllProducers() {
+//
+//    }
+
+//
+//    @GetMapping("/api/products/{id_category}/{page}")
+//    public @ResponseBody Page getProductByCategory(@PathVariable(name = "id_category") Integer id_category, @PathVariable(name = "page") Integer page) {
+//        Pageable pageable = PageRequest.of(page, 9);
+//        Category category = productService.findCategoryById(id_category);
+//        Page<Product> productList = productService.findProductByCategory(category, pageable);
+//        return productList;
+//    }
 
 }

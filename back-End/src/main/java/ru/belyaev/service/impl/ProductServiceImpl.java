@@ -14,6 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import ru.belyaev.entity.Category;
 import ru.belyaev.entity.Product;
@@ -40,26 +41,20 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.count();
     }
 
+
+
+    @Override
+    public List<Product> getAllProducts() {
+        List<Product> products = productRepository.findAll();
+        return products;
+
+    }
+
 //    @Override
-//    public List<Product> listAllProducts() {
-//        List<Product> products = productRepository.listAllProduct();
+//    public Page findProductByCategory(Category category, Pageable pageable) {
+//        Page<Product> products = productRepository.findProductByCategory(category, pageable);
 //        return products;
-
 //    }
-    @Override
-    public Page listAllProducts(Pageable pageable) {
-        Page <Product> products = productRepository.findAll(pageable);
-//        List<Product> products = productRepository.listAllProduct(pageable);
-//        LOGGER.info("Pag find-First {}",products1.stream().findFirst());
-//        LOGGER.info("Pag find-First {}",products1.getContent());
-        return products;
-    }
-
-    @Override
-    public Page findProductByCategory(Category category, Pageable pageable) {
-        Page<Product> products = productRepository.findProductByCategory(category, pageable);
-        return products;
-    }
 
     @Override
     public BigDecimal showMaxHeight() {
@@ -137,6 +132,11 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Category findCategoryById(Integer id) {
         return categoryRepository.findCategoryById(id);
+    }
+
+    @Override
+    public Page findProductByCategory(Category category, Pageable pageable) {
+        return null;
     }
 
     @Override

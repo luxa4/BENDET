@@ -13,13 +13,18 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   @ViewChild('addProduct') el:ElementRef
 
+  private productOnPage = 9
+
+  private allProducts: Product[]
   public products:  Product[]
+  public productsInCategory: Product[]
+  public allProducers:  String[]=[]
   public producers:  String[]=[]
-  public categories: Object[]=[]
+  public categories: String[]=[]
   public prices: number[] =[]
   public newArr: Product[]
   prodSub: Subscription
-  prod1Sub: Subscription
+
 
   srcTmp: string
   string: string = ''
@@ -39,35 +44,32 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   constructor(private prodService:ProductService) { }
 
-  defaultSets():Promise<any> {
-    return new Promise( (resolve, reject) => {
-      this.prodSub = this.prodService.getProducts(this.loadMoreCount).subscribe(products => {
-        this.totalPages = products.totalPages
-        this.products = products.content
-        resolve()
-      })
-    })
-
-  }
-
-  getProducers(id_category: number) {
-    this.prodService.getProducersByCategory(id_category).subscribe( resp => {
-      this.producers = resp
-                        .map( resp => resp.name)
-                        .filter ( (cat, i, cats) => cats.indexOf(cat) === i)
-    })
-  }
-
   ngOnInit(): void {
-    this.defaultSets().then( () => {
-      this.prodService.getCategories().subscribe( resp => {
-        this.categories = resp
-      })
-      this.prices = this.products.map( pr => pr.price)
+    this.prodSub = this.prodService.getProducts().subscribe(products => {
+      this.allProducts = products
+      this.products = this.allProducts.filter( (v, i, arr) => i < this.productOnPage)
+
+      this.producers = this.allProducers = products
+        .map(products => products.producer.name)
+        .filter( (v, i, arr) => arr.indexOf(v) === i)
+      console.log(`OnInit allProducers : ${this.allProducers}`)
+
+      this.categories = products
+        .map(products => products.category.name)
+        .filter( (v, i, arr) => arr.indexOf(v) === i)
+      console.log(`OnInit categories: ${this.categories}`)
+
+      this.prices = this.allProducts.map( products => products.price)
       this.minPrice = Math.min(...this.prices)
       this.maxPrice = Math.max(...this.prices)
+      console.log("Mix Price",this.minPrice)
+      console.log("Max Price",this.maxPrice)
+      this.totalPages = this.getTotalPages(this.allProducts.length, this.productOnPage)
     })
+  }
 
+  getTotalPages(countProducts: number, productsOnPage) {
+    return  Math.ceil(countProducts/productsOnPage)
   }
 
   changeSrc(product:Product, inFocus:boolean) {
@@ -80,13 +82,15 @@ export class HomePageComponent implements OnInit, OnDestroy {
   }
 
   resetFilters() {
-    this.defaultSets()
+    this.products = this.allProducts.filter( (v, i, arr) => i< this.productOnPage)
+    this.totalPages = this.getTotalPages(this.allProducts.length, this.productOnPage)
     this.producer = ''
     this.category = ''
     this.string = ''
     this.minPrice =  Math.min(...this.prices)
     this.maxPrice =  Math.max(...this.prices)
     this.typeLoadMore = 'allProduct'
+    this.loadMoreFlag = true
     console.log(this.minPrice)
     console.log(this.maxPrice)
   }
@@ -101,7 +105,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.prodSub.unsubscribe()
-    this.prod1Sub.unsubscribe()
+
   }
 
   loadMore(typeLoadMore: String) {
@@ -110,20 +114,26 @@ export class HomePageComponent implements OnInit, OnDestroy {
     switch (typeLoadMore) {
       case "allProduct":
         console.log(`Случай - allProducts`);
-        this.prod1Sub = this.prodService.getProducts(this.loadMoreCount).subscribe( resp => {
-          this.products.push(...resp.content)
-          console.log("контент", resp.content)
-          console.log("с пушем",this.products)
-          })
-          break;
+        var temp = this.allProducts
+          .filter( (v, i, arr) => i >= (this.loadMoreCount * this.productOnPage) &&  i < (this.loadMoreCount * this.productOnPage+this.productOnPage))
+        this.products.push(...temp)
+        console.log("контент", temp)
+        console.log("с пушем",this.products)
+        break;
+
       case "byCategory":
-          console.log(`Случай - byCategory`);
-          this.prod1Sub = this.prodService.getProductsByCategory(this.id_category, this.loadMoreCount).subscribe( resp => {
-            this.products.push(...resp.content)
-            console.log("контент", resp.content)
-            console.log("с пушем", this.products)
-          })
-            break;
+        console.log(`Случай - byCategory`);
+        console.log("Produts при нажатии кнопки загрузить: ", this.products)
+        console.log("loadMoreCount при нажатии кнопки загрузить: ", this.loadMoreCount)
+
+        console.log("Всего в текущей категории",this.productsInCategory);
+        var tempCat = this.productsInCategory
+          .filter( (v, i, arr) => i >= (this.loadMoreCount * this.productOnPage) &&  i < (this.loadMoreCount * this.productOnPage+this.productOnPage))
+        console.log("Отфильтрованный для добавления:", tempCat)
+        console.log("Produts до добаления: ", this.products)
+        this.products.push(...tempCat)
+        console.log("Produts после добаления:", this.products)
+        break;
     }
 
     console.log(this.loadMoreCount, this.totalPages)
@@ -133,13 +143,16 @@ export class HomePageComponent implements OnInit, OnDestroy {
     }
   }
 
-  showProductByCategory(id_category: number) {
-    this.loadMoreFlag = true
-    this.prodService.getProductsByCategory(id_category, this.loadMoreCount).subscribe( products => {
-      this.products = products.content
-      this.totalPages = products.totalPages
-    })
-    this.getProducers(id_category)
+  showProductByCategory(cat: String) {
+    this.productsInCategory = this.allProducts.filter( pr => pr.category.name === cat)
+    this.products = this.productsInCategory
 
+    this.totalPages = this.getTotalPages(this.products.length, this.productOnPage)
+    if (this.totalPages >=2) {
+      this.loadMoreFlag = true
+    }
+    console.log('Categories pages', this.totalPages)
+    this.products = this.productsInCategory.filter( (v, i, arr) => i< this.productOnPage)
+    console.log('После перехода на категорию', this.products)
   }
 }

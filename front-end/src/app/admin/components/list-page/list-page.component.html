@@ -19,7 +19,7 @@
         <tbody>
         <tr *ngFor="let product of products; let idx=index">
           <th scope="row">{{idx+1}}</th>
-          <td>{{product.brand}}</td>
+          <td>{{product.producer.name}}</td>
           <td>{{product.name}}</td>
           <td>{{product.height}}</td>
           <td>{{product.width}}</td>
