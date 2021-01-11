@@ -1,6 +1,8 @@
+<div class="carusel" style="background-image: url('assets/images/table.jpg')"></div>
+
 <div class="container">
   <div class="row">
-    <div class="col-12 menu text-center">
+    <div class="col-12 menu text-left">
       <p ngDefaultControl
          *ngFor="let cat of categories"
          [(ngModel)]="category"
@@ -8,20 +10,13 @@
          (click)="showProductByCategory(cat); category= cat">
         {{cat}}
       </p>
-      <h1>{{productsFiltered.length}}</h1>
     </div>
   </div>
   <div class="row filters">
         <div class="col-3">
            <div class="priceFilter">
              <div class="filterTitle ml-9">Цена, <i class="fas fa-ruble-sign"></i></div>
-<!--             <div class="container-fluid">-->
-<!--               <div class="row justify-content-around">-->
-<!--                 <div class="col-6"><input type="text" value="{{minPrice | currency:'RUR':'symbol-narrow':'1.2-2':'ru' }}"></div>-->
-<!--                 <div class="col-6"><input type="text" value="{{maxPrice | currency:'RUR':'symbol-narrow':'1.2-2':'ru'}}"></div>-->
-<!--               </div>-->
-<!--             </div>-->
-             <div class="mt-67">
+             <div class="mt-67 ml-9">
                 <app-slider-price
                   *ngIf="maxPrice && minPrice"
                   [maxPrice]="maxPrice" [minPrice]="minPrice"
@@ -62,9 +57,9 @@
   <div class="row" *ngIf="maxPrice && minPrice">
     <div class="col-4"
          *ngFor="let product of products; let idx=index">
-      <div class="productCard text-center">
-        <div class="text-center"><img [src]="product.imageUrl1" (mouseenter)="changeSrc(product, true)" (mouseout)="changeSrc(product, false)" alt="" width="424px" height="267px"></div>
-        <div class="pr-name">{{idx+1}} - {{product.category.name}} {{product.name}}</div>
+      <div class="productCard text-center" >
+        <div class="text-center" [routerLink]="['/product', product.id]"><img [src]="product.imageUrl1" (mouseenter)="changeSrc(product, true)" (mouseout)="changeSrc(product, false)" alt="" width="424px" height="267px"></div>
+        <div class="pr-name">{{product.category.name}} {{product.name}}</div>
         <div class="pr-price">{{product.price | currency:'RUR':'symbol-narrow':'1.2-2':'ru'}}</div>
       </div>
     </div>
@@ -74,15 +69,5 @@
       <button class="btn-more-load" (click)="loadMore()">Загрузить еще</button>
     </div>
   </div>
-  <div class="row">
-    <div class="col-12">
-      <div class="footer text-center">
-        <a href="#"><img src="assets/images/logoFoot.png" width="120px" height="40px"></a>
-<!--        <a href="#"><img src="assets/images/burakovStudio.png" width="120px" height="40px"></a>-->
 
-
-      </div>
-
-    </div>
-  </div>
 </div>

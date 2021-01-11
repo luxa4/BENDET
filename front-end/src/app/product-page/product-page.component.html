@@ -1,1 +1,82 @@
-<p>product-page works!</p>
+
+<div class="container-fluid x">
+  <div class="row">
+    <div class="col-11 offset-1">
+      <div class="catalog"><a href="#">Каталог</a> / {{product.category.name}} / {{product.category.name}} {{product.name}}</div>
+    </div>
+  </div>
+  <div class="cardOfProduct">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="card-title">{{product.category.name}} {{product.name}}</div>
+          <div class="card-count">Количество: <input type="number" value="1" min="1" [(ngModel)]="count" [max]="product.totalCount"></div>
+          <div class="card-totalCount">Наличие: <span class="card-totalCount-value">{{product.totalCount}} шт. на складе</span></div>
+          <div class="card-price">{{product.price | currency:'RUR':'symbol-narrow':'1.2-2':'ru'}}</div>
+          <button class="btn-addToCart" (click)="addToCart(product.id)">Добавить в корзину</button>
+          <div class="card-block">
+            <div class="row justify-content-around description-title">
+              <div class="col-10 " (click)="showDescription=!showDescription">Описание</div>
+              <div class="col-2 znak-close-open text-right" (click)="showDescription=!showDescription">-</div>
+            </div>
+            <div class="c-d-text" *ngIf="showDescription">
+              {{product.description}}
+            </div>
+          </div>
+          <div class="card-block">
+            <div class="row justify-content-around description-title">
+              <div class="col-10" (click)="showParams=!showParams">Характеристики</div>
+              <div class="col-2 znak-close-open text-right" (click)="showParams=!showParams">-</div>
+            </div>
+            <div class="row justify-content-around" *ngIf="showParams">
+              <div class="col-10 name-param">Длина (см):</div>
+              <div class="col-2 c-d-text text-right">{{product.length}}</div>
+              <div class="col-10 name-param">Ширина (см):</div>
+              <div class="col-2 c-d-text text-right">{{product.width}}</div>
+              <div class="col-10 name-param ">Высота (см):</div>
+              <div class="col-2 c-d-text text-right">{{product.height}}</div>
+              <div class="col-10 name-param">Вес (кг):</div>
+              <div class="col-2 c-d-text text-right">{{product.weight}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 offset-1">
+      <div class="first_img"><img [src]="product.imageUrl3" alt=""></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 offset-1 ">
+      <div class="container-fluid quality">
+        <div class="row ">
+          <div class="col-5 ml-33">
+            <div class="title-quality">Долговечность</div>
+            <div class="title-text">Мини диван, который простоит
+              века. На этом диване будут завязывать шнурки
+              к школе еще ваши правнуки.
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="title-quality">Качество</div>
+            <div class="title-text">Непревзойденная немецкая сборка и качественные материалы, устойчивые
+              к любым условиям использования в квартире.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 offset-1">
+      <div class="first_img"><img [src]="product.imageUrl4" alt=""></div>
+      <div class="last_img"><img [src]="product.imageUrl5" alt=""></div>
+    </div>
+  </div>
+
+</div>
+
+

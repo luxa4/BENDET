@@ -11,19 +11,16 @@ import {log} from 'util';
 })
 export class HomePageComponent implements OnInit, OnDestroy {
 
-  @ViewChild('addProduct') el:ElementRef
 
   private productOnPage = 9
 
   private allProducts: Product[]
   public products:  Product[]
-  public productsInCategory: Product[]
   public productsFiltered: Product[]
   public allProducers:  String[]=[]
   public producers:  String[]=[]
   public categories: String[]=[]
   public prices: number[] =[]
-  public newArr: Product[]
   prodSub: Subscription
 
 
@@ -40,8 +37,6 @@ export class HomePageComponent implements OnInit, OnDestroy {
   loadMoreFlag = true
   loadMoreCount = 0
   totalPages: number = 0
-  typeLoadMore: String = 'allProduct'
-  id_category:number
 
   constructor(private prodService:ProductService) { }
 
@@ -84,11 +79,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
   }
 
   resetFilters() {
-    this.productsFiltered = this.allProducts
-    this.products = this.productsFiltered.filter( (v, i, arr) => i < this.productOnPage)
-    this.totalPages = this.getTotalPages(this.allProducts.length, this.productOnPage)
     this.producer = ''
-    this.category = ''
     this.string = ''
     this.minPrice =  Math.min(...this.prices)
     this.maxPrice =  Math.max(...this.prices)
@@ -97,6 +88,8 @@ export class HomePageComponent implements OnInit, OnDestroy {
     this.sortPriceDown = false
     this.sortNameUp = false
     this.sortNameDown = false
+    this.category =='' ? this.productsFiltered = this.allProducts :  this.productsFiltered = this.allProducts.filter( pr => pr.category.name === this.category)
+    this.setsFilter(this.productsFiltered)
   }
 
   changePriceMin(min:number) {

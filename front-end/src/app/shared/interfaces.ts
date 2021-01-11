@@ -9,6 +9,7 @@ export interface Product {
   height:number
   price:number
   weight:number
+  totalCount?:number
   description:string
   imageUrl1:string
   imageUrl2:string
